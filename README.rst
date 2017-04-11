@@ -1,5 +1,5 @@
-RailsDev.Vagrant
-================
+CMO Vagrant
+===========
 
 This is a kit for setting up a development enviroment for LEMP stack (Linux, Nginx, MySQL, PHP) in a hosted virtual machine.
 
@@ -59,8 +59,11 @@ In your web browser open the page::
     http://localhost:8088/info.php
 
 
-  # apt-get install -y mysql-server
-  # php5-mysql
+For now, remove the file by typing::
+
+    $ vagrant ssh
+    $ sudo rm /var/www/html/info.php
+
 
 References
 ----------

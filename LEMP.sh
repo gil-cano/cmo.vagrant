@@ -14,6 +14,14 @@ apt-get install -y nginx
 # Install PHP fastCGI process manager
 apt-get install -y php5-fpm
 
+# Install mysql
+debconf-set-selections <<< "mysql-server mysql-server/root_password password 1234"
+debconf-set-selections <<< "mysql-server mysql-server/root_password_again password 1234"
+apt-get install -y mysql-server
+
+# Install php mysql modules
+apt-get install -y php5-mysql
+
 # Make fpm more secure
 sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini
 service php5-fpm restart

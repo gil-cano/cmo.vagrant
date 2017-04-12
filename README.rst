@@ -64,6 +64,29 @@ For now, remove the file by typing::
     $ vagrant ssh
     $ sudo rm /var/www/html/info.php
 
+Install CMO
+-----------
+
+copy application to /var/www/html::
+
+    $ ln -s /vagrant/app /var/www/html/
+
+go to::
+
+    http://localhost:8088/app/welcome.php
+
+(disable validation in welcome.php for testing)
+
+Install cmo database (usurios.php)::
+
+    $ mysql -u user -p
+    mysql> CREATE DATABASE databasename;
+    mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY 'some_password';
+    mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+        -> ON databasename.*
+        -> TO 'user'@'localhost';
+    mysql> \q
+    $ mysql -u user -p databasename < dump_file.sql
 
 References
 ----------

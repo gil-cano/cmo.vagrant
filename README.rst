@@ -82,9 +82,7 @@ Install cmo database (usurios.php)::
     $ mysql -u user -p
     mysql> CREATE DATABASE databasename;
     mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY 'some_password';
-    mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
-        -> ON databasename.*
-        -> TO 'user'@'localhost';
+    mysql> GRANT ALL ON databasename.* TO 'user'@'localhost';
     mysql> \q
     $ mysql -u user -p databasename < dump_file.sql
 

@@ -18,6 +18,9 @@ apt-get install -y php5-fpm
 debconf-set-selections <<< "mysql-server mysql-server/root_password password 1234"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password 1234"
 apt-get install -y mysql-server
+# listen more than localhost
+sed -i "s/^bind-address/#bind-address/" /etc/mysql/my.cnf
+service mysql restart
 
 # Install php mysql modules
 apt-get install -y php5-mysql

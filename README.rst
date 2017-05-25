@@ -86,6 +86,15 @@ Install cmo database (usurios.php)::
     mysql> \q
     $ mysql -u user -p databasename < dump_file.sql
 
+
+MySQL acces from host
+---------------------
+
+Grant access to database ::
+
+    mysql> GRANT ALL ON databasename.* TO 'user'@'%';
+
+
 References
 ----------
 

@@ -28,11 +28,13 @@ To you get a command prompt on your "guest" machine use the command::
 
     $ vagrant ssh
 
-You may now start and stop the virtual machine by issuing command in the same directory::
+You may now start and stop the virtual machine by issuing command in the same directory.
+
+Stop the virtual machine, saving an image of its state so that you may later resume::
 
     $ vagrant suspend
 
-stops the virtual machine, saving an image of its state so that you may later restart with::
+resume virtual machine from previus state::
 
     $ vagrant resume
 
@@ -40,7 +42,7 @@ stop virtual machine::
 
     $ vagrant halt
 
-start virtual machine::
+reload virtual machine (this will update configuration)::
 
     $ vagrant reload
 
@@ -87,8 +89,8 @@ Install cmo database (usurios.php)::
     $ mysql -u user -p databasename < dump_file.sql
 
 
-MySQL acces from host
----------------------
+MySQL access from host
+----------------------
 
 Grant access to database ::
 

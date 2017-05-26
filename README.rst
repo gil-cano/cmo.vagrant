@@ -94,6 +94,7 @@ MySQL access from host
 
 Grant access to database ::
 
+    mysql> CREATE USER 'user'@'%' IDENTIFIED BY 'some_password';
     mysql> GRANT ALL ON databasename.* TO 'user'@'%';
 
 

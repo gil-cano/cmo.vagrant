@@ -98,6 +98,14 @@ Grant access to database ::
     mysql> GRANT ALL ON databasename.* TO 'user'@'%';
 
 
+Update Database
+---------------
+
+Delete database (When a database is dropped, user privileges on the database are not automatically dropped) ::
+
+    mysql> DROP DATABASE IF EXISTS cons_cmo;
+
+
 References
 ----------
 
